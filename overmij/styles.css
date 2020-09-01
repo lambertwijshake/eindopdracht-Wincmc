@@ -1,0 +1,121 @@
+/*mobiel*/
+.parent {
+  display: grid;
+  grid-template-columns: 10px 1fr 10px;
+  grid-template-rows: 100px 60px auto 60px;
+  height: 1000px;
+  grid-template-areas:
+    ". h ."
+    ". n ."
+    ". m ."
+    ". f .";
+}
+
+main,
+footer {
+  margin: 5px;
+}
+/*kop*/
+header {
+  background-color: #88cc88;
+  grid-area: h;
+  padding-top: 20px;
+}
+.logo img {
+  width: 50%;
+  padding-left: 60px;
+}
+/*navigatie*/
+nav {
+  background-color: #88cc88;
+  grid-area: n;
+  margin-bottom: 10px;
+}
+
+.navigation_block li {
+  display: inline;
+}
+
+.navigation_block a:hover {
+  color: red;
+}
+/*main*/
+
+main {
+  background-color: #cbebcb;
+  grid-area: m;
+  color: #004400;
+  padding: 0px 20px;
+  text-align: center;
+}
+main img {
+  width: 100%;
+  padding-top: 20px;
+  text-align: center;
+}
+a:link{
+  font-weight:bold;
+  color:blue;
+  text-decoration: none ;
+}
+a:visited{
+  font-weight:bold;
+  color:maroon;
+  text-decoration:none;
+}
+a:hover{
+  font-weight:bold;
+  background:#88cc88;
+  text-decoration:underline;
+}
+a:active{
+  font-weight:bold;
+  background:#333;
+  text-decoration: underline;
+}
+.artiekel1 img {
+  width: 45%;
+  margin: 3px;
+}
+
+footer {
+  background-color: #88cc88;
+  grid-area: f;
+}
+.Footer_block li {
+  display: inline;
+}
+/*desktop*/
+@media (min-width: 400px) {
+  .parent {
+    grid-template-columns: 10px 200px auto 10px;
+    grid-template-rows: 95px auto 50px;
+    grid-template-areas:
+      ". h n ."
+      ". m m ."
+      ". f f .";
+  }
+  header,
+  nav {
+    margin-bottom: 10px;
+  }
+  header {
+    padding-top: 5px;
+  }
+  .logo img {
+    width: 60%;
+    padding-left: 50px;
+  }
+  nav {
+    padding-top: 45px;
+    word-spacing: 1em;
+  }
+
+  h1 img{
+    float:left;
+    width: 40%;
+  }
+  .artiekel1 img {
+    width: 25%;
+  }
+}
